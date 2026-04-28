@@ -1,0 +1,14 @@
+# 替换为你的域名
+your-domain.com {
+    reverse_proxy /api/* backend:8080
+    reverse_proxy /* frontend:80
+    
+    # 自动 HTTPS
+    tls your-email@example.com
+}
+
+# 本地测试可用 HTTP
+# localhost {
+#     reverse_proxy /api/* backend:8080
+#     reverse_proxy /* frontend:80
+# }
